@@ -1,0 +1,30 @@
+﻿<Window x:Class="Control7.Views.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control7.Views.Windows"
+        mc:Ignorable="d"
+        Title="Перезагрузка" Height="800" Width="1300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".4*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="/Resources/SK2.png" Stretch="Fill"/>
+        <StackPanel VerticalAlignment="Top" Margin="0 100 0 0">
+            <Button Name="AddManufacterBtn" Content="Добавить производителя" Width="250" Height="50" Click="AddManufacterBtn_Click"/>
+            <Border Height="20"/>
+            <Button Name="AddMaterialBtn" Content="Добавить товар" Width="250" Height="50" Click="AddMaterialBtn_Click"/>
+            <Border Height="20"/>
+            <Button Name="AddEmployee" Content="Добавить сотрудника" Width="250" Height="50" Click="AddEmployee_Click"/>
+            <Border Height="20"/>
+            <Button Name="AccountingBtn" Content="Ведение учета" Width="250" Height="50" Click="AccountingBtn_Click"/>
+            <Border Height="20"/>
+            <Button Name="OtchetBtn" Content="Отчет" Width="250" Height="50" Click="OtchetBtn_Click"/>
+        </StackPanel>
+
+        <Frame Name="MainFrm" Grid.Column="2"/>
+    </Grid>
+</Window>
