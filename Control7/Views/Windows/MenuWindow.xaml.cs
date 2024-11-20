@@ -30,12 +30,12 @@ namespace Control7.Views.Windows
 
         private void AddManufacterBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrm.Navigate(new AddManuacterPage());
         }
 
         private void AddMaterialBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrm.Navigate(new AddMaterialPage());
         }
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
@@ -45,7 +45,7 @@ namespace Control7.Views.Windows
 
         private void AccountingBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrm.Navigate(new AccountingPage());
         }
 
         private void OtchetBtn_Click(object sender, RoutedEventArgs e)

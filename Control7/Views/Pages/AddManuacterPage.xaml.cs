@@ -25,22 +25,19 @@ namespace Control7.Views.Pages
         public AddManuacterPage()
         {
             InitializeComponent();
-            ManufacterCmb.ItemsSource = _context.Manufatcer.ToList();
-            ManufacterCmb.DisplayMemberPath = "Name";
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (ManufacterCmb.SelectedItem != null && MaterialNameTb.Text != string.Empty)
+            if (ManufacterTb.Text != string.Empty)
             {
-                Material newMaterial = new Material()
+                Manufatcer newManufacter = new Manufatcer()
                 {
-                    Name = MaterialNameTb.Text,
-                    Manufatcer = ManufacterCmb.SelectedItem as Manufatcer
+                    Name = ManufacterTb.Text
                 };
-                _context.Material.Add(newMaterial);
+                _context.Manufatcer.Add(newManufacter);
                 _context.SaveChanges();
-                MessageBox.Show("Материал добавлен.");
+                MessageBox.Show("Производитель добавлен.");
             }
         }
     }
